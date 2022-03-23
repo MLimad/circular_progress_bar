@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --percent-html:80;
+    --percent-css:90;
+    --percent-js:76;
+
+}
+
+body{
+    background-color: #03a9f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    display: flex;
+    width: 1200px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.box{
+    width: 300px;
+    height: 350px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.box svg{
+    width: 150px;
+    height: 150px;
+}
+
+.box .circle{
+    position: relative;
+}
+
+svg circle{
+    fill: none;
+    stroke-width: 10px;
+    transform: translate(5px,5px);
+    stroke-linecap: round;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+svg circle{
+    stroke-dashoffset: 0;
+    stroke: #f3f3f3;
+}
+
+.box:nth-child(1) svg circle:nth-child(2){
+    stroke: #03a9f4;
+    stroke-dashoffset: calc(440px - (440px * var(--percent-html)) / 100)   ;
+}
+
+.box:nth-child(2) svg circle:nth-child(2){
+    stroke: #03a9f4;
+    stroke-dashoffset: calc(440px - (440px * var(--percent-css)) / 100)   ;
+}
+
+.box:nth-child(3) svg circle:nth-child(2){
+    stroke: #03a9f4;
+    stroke-dashoffset: calc(440px - (440px * var(--percent-js)) / 100)   ;
+}
+
+
+
+
+.number{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #03a9f4;
+    transition: 0.6s;
+}
+
+
+.number span{
+    font-size: 18px;
+    padding: 3px;
+}
+
+.text{
+    margin-top: 6px;
+    color: #03a9f4;
+    text-transform: capitalize;
+    transition: 0.6s;
+    font-family: Arial, Helvetica, sans-serif;
+}
